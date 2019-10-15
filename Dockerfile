@@ -1,10 +1,5 @@
-FROM uyoldas/uvicorn-gunicorn
+FROM uyoldas/uvicorn-gunicorn:python3.7-slim-buster
 
-RUN echo "http://dl-8.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
-  && apk update \
-  && apk add py3-numpy py3-pandas
+RUN pip install --no-cache-dir fastapi
 
-RUN pip install fastapi
-
-COPY ./app /app
 
