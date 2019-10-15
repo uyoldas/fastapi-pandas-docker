@@ -1,2 +1,2 @@
 # fastapi-pandas-docker
-Docker image for fastapi including numpy and pandas. 
+This docker image provides fastapi based on gunicorn/uvicorn using python3.7 slim image (Debian Buster). 
